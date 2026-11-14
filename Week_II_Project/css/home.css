@@ -1,0 +1,116 @@
+#hero {
+    background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url('https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1600');
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+#hero h4 { padding-bottom: 15px; font-size: 20px;}
+#hero h2 { font-size: 46px; line-height: 54px; color: #222;}
+#hero h1 { font-size: 54px; color: #088178;}
+#hero p { font-size: 16px; color: #465b52; margin: 15px 0 20px 0;}
+
+#feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+#feature .fe-box {
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0,0,0,0.03);
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 15px 0;
+    background: lightseagreen;
+}
+#feature .fe-box img { width: 100%; margin-bottom: 10px;}
+#feature .fe-box h6 { display: inline-block; padding: 9px 8px 6px 8px; line-height: 1; border-radius: 4px; color: blue; background-color: lightcyan; font-size: 12px;}
+
+/* ==========================================================================
+   BANNER COMPONENT LAYOUT RE-ENGINEERING
+   ========================================================================== */
+#banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?q=80&w=1200');
+    width: 100%;
+    min-height: 40vh; /* FIX: Switch from absolute height to dynamic min-height */
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px; /* FIX: Provide vertical buffering protection layout fields */
+    box-sizing: border-box;
+}
+#banner h4 { 
+    color: #fff; 
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+#banner h2 { 
+    color: #fff; 
+    font-size: 28px; /* FIX: Controlled base size layout configuration */
+    padding: 15px 0;
+    line-height: 1.4; /* FIX: Clean text wrapping bounds */
+    max-width: 800px; /* FIX: Prevents textual layout lines extending too wide */
+}
+#banner h2 span { color: #ef3636;}
+
+/* ==========================================================================
+   STRICT TABLET & MOBILE BREAKPOINTS FOR BANNER + HERO
+   ========================================================================== */
+@media (max-width: 768px) {
+    #hero {
+        padding: 0 40px;
+        background-position: top 25% right 35%;
+    }
+    #hero h2 { font-size: 36px; line-height: 44px; }
+    #hero h1 { font-size: 42px; }
+    
+    #feature {
+        justify-content: center;
+    }
+    
+    #banner h2 {
+        font-size: 22px; /* Scale text down gracefully for tablets */
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero {
+        padding: 0 20px;
+        background-position: 65%;
+    }
+    #hero h4 { font-size: 16px; }
+    #hero h2 { font-size: 28px; line-height: 36px; }
+    #hero h1 { font-size: 32px; }
+    #hero p { font-size: 14px; }
+    
+    #feature .fe-box {
+        width: 140px; /* Slim feature items to neatly fit side-by-side */
+        padding: 15px 10px;
+    }
+    
+    #banner {
+        padding: 40px 15px; /* Compact padding for small mobile devices */
+    }
+    #banner h4 {
+        font-size: 14px;
+    }
+    #banner h2 {
+        font-size: 18px; /* Compact structural fluid text matching */
+        line-height: 1.5;
+    }
+}

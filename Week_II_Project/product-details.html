@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Streetwear E-Commerce | Product Specifications</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/details.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+    <header id="header">
+        <a href="index.html" class="logo">Apex<span>Streetwear</span></a>
+        <nav>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="login.html">Login</a></li>
+                
+                <li id="user-profile-status" class="user-status-item">
+                    <i class="fa-regular fa-user"></i> <span id="profile-display-text">Guest</span>
+                </li>
+                
+                <li><a href="checkout.html" id="lg-bag"><i class="fa-solid fa-bag-shopping"></i><span class="cart-count">0</span></a></li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+        </nav>
+        <div id="mobile">
+            <a href="checkout.html"><i class="fa-solid fa-bag-shopping"></i><span class="cart-count">0</span></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </header>
+
+    <section id="prodetails" class="section-p1">
+        <div class="single-pro-image">
+            <img src="" width="100%" id="MainImg" alt="Selected product image" loading="lazy">
+            <div class="small-img-group">
+                <div class="small-img-col">
+                    <img src="" width="100%" class="small-img" alt="Product thumbnail 1" loading="lazy">
+                </div>
+                <div class="small-img-col">
+                    <img src="" width="100%" class="small-img" alt="Product thumbnail 2" loading="lazy">
+                </div>
+                <div class="small-img-col">
+                    <img src="" width="100%" class="small-img" alt="Product thumbnail 3" loading="lazy">
+                </div>
+            </div>
+        </div>
+        <div class="single-pro-details">
+            <h6 id="detail-brand">Brand / Category</h6>
+            <h4 id="detail-name">Product Name Display</h4>
+            <h2 id="detail-price">$0.00</h2>
+            
+            <div class="interactive-configuration-controls">
+                <select id="detail-size">
+                    <option>Select Size / Allocation</option>
+                    <option>Standard / Default Parameter</option>
+                    <option>XL Size Matrix</option>
+                    <option>XXL Size Matrix</option>
+                    <option>Small Profile</option>
+                    <option>Large Profile</option>
+                </select>
+                <div class="quantity-trigger-group">
+                    <input type="number" value="1" min="1" id="detail-qty">
+                    <button class="btn-normal" id="detail-add-to-cart">Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="extended-specifications-container">
+                <h3>Product Overview Details</h3>
+                <p id="main-product-description-node">Experience clean frontend design craftsmanship. This item offers top tier structural composition matched with dynamic client browser state integration routines.</p>
+                
+                <div class="matrix-specs-grid">
+                    <div class="spec-tile">
+                        <span class="tile-label"><i class="fa-solid fa-microchip"></i> Build & Core</span>
+                        <span class="tile-val">Premium Certified Structure</span>
+                    </div>
+                    <div class="spec-tile">
+                        <span class="tile-label"><i class="fa-solid fa-shield-halved"></i> Warranty Track</span>
+                        <span class="tile-val">12-Month Coverage Plan</span>
+                    </div>
+                    <div class="spec-tile">
+                        <span class="tile-label"><i class="fa-solid fa-truck-ramp-box"></i> Logistics</span>
+                        <span class="tile-val">Immediate Inventory Route</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-section">
+                <h4>Client Ratings & Reviews</h4>
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"Premium look, completely matches description guidelines." - Verified Platform Buyer</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="copyright">
+            <p>© 2026, Anuj Malpani - Founder ApexStreetwear</p>
+        </div>
+    </footer>
+
+    <script src="js/catalog.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/details.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

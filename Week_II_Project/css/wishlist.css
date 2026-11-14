@@ -1,0 +1,83 @@
+.wishlist-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.wish-card {
+    width: 100%; /* Spans full cell boundary dynamically */
+    background: #fff;
+    border: 1px solid #cce7d0;
+    padding: 16px;
+    border-radius: 20px;
+    text-align: left;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.wish-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+}
+
+.wish-card img { 
+    width: 100%; 
+    height: auto;
+    aspect-ratio: 4 / 3; 
+    object-fit: contain; 
+    background-color: #f9fbf9;
+    border-radius: 14px; 
+    display: block;
+}
+
+.wish-card h5 { 
+    margin: 12px 0 5px 0; 
+    font-size: 14px; 
+    color: #1a1a1a;
+    line-height: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.wish-card h4 { 
+    color: #088178; 
+    font-size: 16px; 
+    font-weight: 700;
+    margin-bottom: 15px; 
+    margin-top: auto; /* Pushes price to base alignment symmetrically */
+}
+
+.wish-actions { 
+    display: flex; 
+    gap: 10px; 
+    width: 100%;
+}
+
+.wish-actions button { 
+    flex: 1; 
+    padding: 10px; 
+    font-size: 12px; 
+    font-weight: 600;
+    border-radius: 4px; 
+    cursor: pointer; 
+    border: none; 
+    transition: 0.2s ease;
+}
+
+.remove-wish-btn { background: #fddde4; color: #ef3636; }
+.remove-wish-btn:hover { background: #fcb6c6; }
+
+.add-cart-wish-btn { background: #e8f6ea; color: #088178; }
+.add-cart-wish-btn:hover { background: #088178; color: #fff; }
+
+/* Responsive adjustments for tiny portrait devices */
+@media (max-width: 480px) {
+    .wishlist-container {
+        grid-template-columns: minmax(0, 1fr); /* Single block stack protection layout fields */
+    }
+}

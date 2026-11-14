@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Streetwear E-Commerce | Access Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+    <header id="header">
+        <a href="index.html" class="logo">Apex<span>Streetwear</span></a>
+        <nav>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a class="active" href="login.html">Login</a></li>
+                
+                <li id="user-profile-status" class="user-status-item">
+                    <i class="fa-regular fa-user"></i> <span id="profile-display-text">Guest</span>
+                </li>
+                
+                <li><a href="checkout.html" id="lg-bag"><i class="fa-solid fa-bag-shopping"></i><span class="cart-count">0</span></a></li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+        </nav>
+        <div id="mobile">
+            <a href="checkout.html"><i class="fa-solid fa-bag-shopping"></i><span class="cart-count">0</span></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </header>
+
+    <section id="form-wrapper" class="section-p1">
+        <div class="form-container">
+            <div class="form-toggle-headers">
+                <button id="toggle-login-btn" class="active">Sign In</button>
+                <button id="toggle-register-btn">Register</button>
+            </div>
+
+            <form id="auth-form" novalidate>
+                <div class="input-block">
+                    <label>Email Address</label>
+                    <input type="email" id="auth-email" required placeholder="name@domain.com">
+                    <span class="error-msg" id="email-error">Invalid structural email layout context.</span>
+                </div>
+                <div class="input-block">
+                    <label>Password</label>
+                    <input type="password" id="auth-password" required minlength="6" placeholder="******">
+                    <span class="error-msg" id="password-error">Password requirements unmet (min 6 characters).</span>
+                </div>
+                <div class="input-block register-only hidden">
+                    <label>Confirm Password</label>
+                    <input type="password" id="auth-confirm-password" placeholder="******">
+                    <span class="error-msg" id="confirm-error">Passwords do not match parameters.</span>
+                </div>
+                <button type="submit" class="btn-normal" id="auth-submit-btn">Proceed Secure Access</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="copyright">
+            <p>© 2026, Anuj Malpani - Founder ApexStreetwear</p>
+        </div>
+    </footer>
+
+    <script src="js/navbar.js"></script>
+    <script>
+        // Inline Interface Controller Routing Form Layout Alternations
+        const logBtn = document.getElementById('toggle-login-btn');
+        const regBtn = document.getElementById('toggle-register-btn');
+        const regFields = document.querySelectorAll('.register-only');
+        const subBtn = document.getElementById('auth-submit-btn');
+        const authForm = document.getElementById('auth-form');
+
+        logBtn.addEventListener('click', () => {
+            logBtn.classList.add('active'); regBtn.classList.remove('active');
+            regFields.forEach(f => f.classList.add('hidden'));
+            subBtn.textContent = "Proceed Secure Access";
+        });
+        regBtn.addEventListener('click', () => {
+            regBtn.classList.add('active'); logBtn.classList.remove('active');
+            regFields.forEach(f => f.classList.remove('hidden'));
+            subBtn.textContent = "Create Account";
+        });
+
+        authForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let valid = true;
+            const email = document.getElementById('auth-email');
+            const pass = document.getElementById('auth-password');
+            
+            if(!email.value.includes('@')) {
+                document.getElementById('email-error').style.display = 'block'; valid = false;
+            } else { document.getElementById('email-error').style.display = 'none'; }
+
+            if(pass.value.length < 6) {
+                document.getElementById('password-error').style.display = 'block'; valid = false;
+            } else { document.getElementById('password-error').style.display = 'none'; }
+
+            if(valid) {
+                localStorage.setItem('ApexStreetwearAuthUserSession', email.value);
+                window.location.href = "index.html";
+            }
+        });
+    </script>
+</body>
+</html>

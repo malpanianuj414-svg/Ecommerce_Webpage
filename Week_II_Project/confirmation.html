@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Streetwear E-Commerce | Order Transmitted</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+    <header id="header">
+        <a href="index.html" class="logo">Apex<span>Streetwear</span></a>
+    </header>
+
+    <section id="confirmation-display" class="section-p1" style="text-align: center; padding: 100px 20px;">
+        <div class="success-card">
+            <i class="fa-solid fa-circle-check" style="font-size: 80px; color: #088178; margin-bottom: 20px;"></i>
+            <h2>Transaction Document Dispatched</h2>
+            <p style="margin: 15px 0; color: #465b52;">Your sequence dataset transmission has completed. Processing deployment inventory verification routes.</p>
+            <h4 id="receipt-id" style="color:#088178; font-family: monospace; letter-spacing:2px; margin-bottom:30px;">ORDER-ID: #000000000</h4>
+            <a href="shop.html" class="btn-normal">Re-enter Operational Market</a>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const trackingId = 'ORDER-' + Math.floor(Math.random() * 900000000 + 100000000);
+            document.getElementById('receipt-id').textContent = trackingId;
+            localStorage.removeItem('ApexStreetwearShopCartData');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+/* ==========================================================================
+   STICKY FOOTER MECHANICS MATRIX
+   ========================================================================== */
+html, body {
+    height: 100%; /* Force browser to track complete viewport height boundaries */
+}
+
+body {
+    width: 100%;
+    /*background-color: #fff;*/
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column; /* Flow content blocks vertically down the page */
+}
+
+/* Target the primary sections running between header and footer */
+section {
+    flex: 1 0 auto; /* Force content area to expand and grow to fill empty screens */
+}
+
+/* Keep structural section paddings intact */
+.section-p1 {
+    padding: 40px 50px;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+/* ==========================================================================
+   SHARED DESIGN COMPONENT STYLES
+   ========================================================================== */
+.btn-normal {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #fff;
+    background-color: black;
+    border-color: aqua;
+    border-radius: 4px;
+    cursor: pointer;
+    border: solid 1px;
+    outline: none;
+    transition: 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-normal:hover {
+    background-color: darkcyan;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ==========================================================================
+   GLOBAL RESPONSIVENESS MEDIA HOOKS
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .section-p1 {
+        padding: 35px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-p1 {
+        padding: 30px 16px;
+    }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Streetwear E-Commerce | Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+    <header id="header">
+        <a href="index.html" class="logo">Apex<span>Streetwear</span></a>
+        <nav>
+            <ul id="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="login.html">Login</a></li>
+                
+                <li id="user-profile-status" class="user-status-item">
+                    <i class="fa-regular fa-user"></i> <span id="profile-display-text">Guest</span>
+                </li>
+                
+                <li><a href="checkout.html" id="lg-bag"><i class="fa-solid fa-bag-shopping"></i><span class="cart-count">0</span></a></li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+        </nav>
+        <div id="mobile">
+            <a href="checkout.html"><i class="fa-solid fa-bag-shopping"></i><span class="cart-count">0</span></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </header>
+
+    <section id="hero">
+        <h4>Trade-in-offer</h4>
+        <h2>Super value deals</h2>
+        <h1>On all products</h1>
+        <p>Save more with coupons & up to 70% off!</p>
+        <a href="shop.html" class="btn-normal">Shop Now</a>
+    </section>
+
+    <section id="feature" class="section-p1">
+        <div class="fe-box">
+            <img src="/images/freeshippingicon.png" alt="Image not Loaded">
+            <h6>Free Shipping</h6>
+        </div>
+        <div class="fe-box">
+            <img src="/images/onlineordericon.png" alt="Image not Loaded">
+            <h6>Online Order</h6>
+        </div>
+        <div class="fe-box">
+            <img src="/images/savemoneyicon.png" alt="Image not Loaded">
+            <h6>Save Money</h6>
+        </div>
+        <div class="fe-box">
+            <img src="/images/promotionsicon.png" alt="Image not Loaded">
+            <h6>Promotions</h6>
+        </div>
+        <div class="fe-box">
+            <img src="/images/happyshoppingicon.png" alt="Image not Loaded">
+            <h6>Happy Sell</h6>
+        </div>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <h2>Featured Products</h2>
+        <p>Summer Collection New Modern Designs</p>
+        
+        <div class="category-filter-container">
+            <button class="cat-btn active" data-filter="all">All Collection</button>
+            <button class="cat-btn" data-filter="smartphones">Smartphones</button>
+            <button class="cat-btn" data-filter="smartwatches">Smartwatches</button>
+            <button class="cat-btn" data-filter="shirts">Shirts</button>
+            <button class="cat-btn" data-filter="shoes">Shoes</button>
+        </div>
+
+        <div class="pro-container" id="featured-products"></div>
+    </section>
+
+    <section id="banner" class="section-m1">
+        <h4>Repair Services</h4>
+        <h2>Up to <span>70% Off</span> - All T-Shirts & Accessories</h2>
+        <button class="btn-normal">Explore More</button>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <h4 class="logo">Apex<span>Streetwear</span></h4>
+            <p><strong>Address:</strong> Madanganj-Kishangarh, Rajasthan, India</p>
+            <p><strong>Phone:</strong> +91 XXXXX XXXXX</p>
+        </div>
+        <div class="copyright">
+            <p>© 2026, Anuj Malpani - Founder ApexStreetwear</p>
+        </div>
+    </footer>
+
+    <script src="js/catalog.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/shop.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

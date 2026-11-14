@@ -1,0 +1,167 @@
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: #E3E6F3;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+#header .logo {
+    font-size: 26px;
+    font-weight: 800;
+    color: #222;
+    text-decoration: none;
+    white-space: nowrap;
+}
+#header .logo span {
+    color: #088178;
+}
+#navbar {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+#navbar li {
+    position: relative;
+    padding: 0 20px;
+}
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+#navbar li a:hover, #navbar li a.active {
+    color: #088178;
+}
+#navbar li a.active::after, #navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+/* Base Desktop Cart Count Configuration */
+#lg-bag {
+    position: relative;
+}
+.cart-count {
+    background-color: #088178;
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: -12px;
+    right: -10px;
+    min-width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mobile {
+    display: none;
+    align-items: center;
+}
+#close {
+    display: none;
+}
+
+/* User Profile Status Badge Styles */
+.user-status-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #465b52;
+    background: #e8f6ea;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.user-status-item i {
+    color: #088178;
+}
+.logout-action-link {
+    font-size: 11px;
+    color: #ef3636;
+    text-decoration: underline;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   STRICT MOBILE & TABLET NAVBAR RESPONSIVE FIXES
+   ========================================================================== */
+@media (max-width: 768px) {
+    #header {
+        padding: 15px 20px; /* Snug packing for mobile views */
+    }
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #E3E6F3;
+        box-shadow: -5px 0 30px rgba(0,0,0,0.1);
+        padding: 80px 0 0 30px;
+        transition: 0.3s ease;
+    }
+    #navbar.active {
+        right: 0px;
+    }
+    #navbar li {
+        margin-bottom: 25px;
+    }
+    #lg-bag {
+        display: none; /* Hide wide screen cart layout element */
+    }
+    
+    /* CRITICAL SCREEN FIX: Set container coordinate tracking for mobile cart */
+    #mobile {
+        display: flex;
+        align-items: center;
+        gap: 22px; /* Uniform grid separation between bag and menu bars */
+    }
+    #mobile a {
+        position: relative; /* Restricts the green bubble from escaping to the corner! */
+        display: inline-block;
+        color: #1a1a1a;
+        font-size: 20px;
+    }
+    #mobile a .cart-count {
+        top: -10px;   /* Pins perfectly to the top right of the active bag icon */
+        right: -10px; /* Aligns smoothly centered over the perimeter */
+    }
+    #mobile i#bar {
+        color: #1a1a1a;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    #close {
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #1a1a1a;
+        font-size: 24px;
+        cursor: pointer;
+    }
+}
